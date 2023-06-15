@@ -1,0 +1,20 @@
+---
+const {message} = Astro.props
+---
+
+<span id="data-message"></span>
+
+<script define:vars={{message}}>
+    var i = 0;
+    var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+    function typeWriter() {
+        if (i < message.length) {
+            document.getElementById("data-message").innerHTML += message.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+        }
+    }
+
+    typeWriter()
+</script>
