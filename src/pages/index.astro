@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Typewriter from "../components/Typewriter.astro";
+import ProjectRow from "../components/ProjectRow.astro";
 ---
 
 <BaseLayout>
@@ -34,21 +35,42 @@ import Typewriter from "../components/Typewriter.astro";
 
 	<section class="text-white px-3 py-3">
 		<main class="max-w-screen-lg mx-auto">
-			<h1 class="text-3xl">My Projects</h1>
-			<div class="flex flex-col mt-3">
-				<a class="rounded bg-slate-800 shadow-2xl m-2 hover:m-0 p-2 hover:p-4 transition-all flex flex-row">
-					<div>
-						<h1 class="text-xl">Project 1 Title</h1>
-						<p>Some body text in here</p>
-					</div>
-				</a>
-				<a class="rounded bg-slate-800 shadow-2xl m-2 hover:m-0 p-2 hover:p-4 transition-all">
-					Project 2
-				</a>
-				<a class="rounded bg-slate-800 shadow-2xl m-2 hover:m-0 p-2 hover:p-4 transition-all">
-					Project 3
-				</a>
+			<h1 class="text-3xl">My <span class="font-bold text-blue-400">Projects</span></h1>
+			<div class="flex flex-col mt-3 gap-4">
+				<ProjectRow ref="/" img="/avataaars.svg">
+					<h1 class="text-2xl flex flex-row items-center gap-2">
+						My Portfolio Site
+						<span class="px-2 py-1 rounded text-xs bg-orange-800">Astro</span>
+						<span class="px-2 py-1 rounded text-xs bg-cyan-800">Tailwind</span>
+					</h1>
+					<p>
+						Yep, you're looking at it! This is a project I've been meaning to complete
+						for some time now as a display of the work that I am doing alongside my
+						studies. Let me know if you have any feedback for advice for things that
+						should be done differently.
+					</p>
+					<p class="text-yellow-300 font-bold">Happy Browsing!</p>
+				</ProjectRow>
+				<ProjectRow ref="/" img="/toothbrushes.png">
+					<h1 class="text-2xl flex flex-row items-center gap-2">
+						Digital Self-Care Research Project
+						<span class="px-2 py-1 rounded text-xs bg-pink-800">UX Research</span>
+					</h1>
+					<p>
+						Following on from one of my units on User Experience Fundamentals, I have
+						been involved in a collaborative research project with staff and fellow
+						students on digital self-care. Through this project, I helped to produce
+						a conference paper on the findings of our unit's studies.
+					</p>
+				</ProjectRow>
 			</div>
+		</main>
+	</section>
+
+	<section class="text-white px-3 py-3">
+		<main class="max-w-screen-lg mx-auto">
+			<h1 class="text-3xl">My <span class="font-bold text-blue-400">Posts</span></h1>
+			<p class="text-center text-2xl text-orange-400">Blog posts coming soon. Stay tuned!</p>
 		</main>
 	</section>
 </BaseLayout>
