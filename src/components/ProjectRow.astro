@@ -2,8 +2,8 @@
 const {title, ref, img} = Astro.props
 ---
 
-<a href={ref} class="rounded bg-slate-800 p-4 flex flex-row gap-3 items-center transition-all hover:shadow-lg hover:shadow-blue-400/50 focus:shadow-none">
-    <div class="w-64">
+<a href={ref} class="rounded bg-slate-800 p-4 flex flex-col md:flex-row gap-3 items-center transition-all hover:shadow hover:shadow-blue-400 focus:shadow-none">
+    <div class="w-1/6">
         <img src={img} class="max-h-32 mx-auto" />
     </div>
     <div class="flex flex-col gap-1">
