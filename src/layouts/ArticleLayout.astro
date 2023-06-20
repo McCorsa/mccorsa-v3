@@ -1,11 +1,14 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
-const {title} = Astro.props;
+const {title, img} = Astro.props;
 ---
 
 <BaseLayout>
     <article class="max-w-screen-lg mx-auto text-white my-8 page-content flex flex-col gap-3">
-        <h1 class="text-6xl font-bold mb-4 text-blue-400">{title}</h1>
+        <header class="flex flex-row items-center">
+            <img src={img} class="h-24 mr-6">
+            <h1 class="text-6xl font-bold text-blue-500">{title}</h1>
+        </header>
         <slot/>
     </article>
 </BaseLayout>
