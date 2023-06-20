@@ -1,0 +1,11 @@
+---
+import BaseLayout from "./BaseLayout.astro";
+const {title} = Astro.props;
+---
+
+<BaseLayout>
+    <article class="max-w-screen-lg mx-auto text-white my-8 page-content flex flex-col gap-3">
+        <h1 class="text-6xl font-bold mb-4 text-blue-400">{title}</h1>
+        <slot/>
+    </article>
+</BaseLayout>
